@@ -39,6 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'active_model_serializers'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
