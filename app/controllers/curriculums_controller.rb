@@ -4,6 +4,21 @@ class CurriculumsController < ApplicationController
   end
 
   def show
-    render json: Curriculum.find(params[:id])
+    render json: curriculum
+  end
+
+  def update
+    curriculum.update_attributes(curriculum_params)
+    render json: curriculum
+  end
+
+  private
+
+  def curriculum_params
+    params.require(:curriculum).permit(:title, :description)
+  end
+
+  def curriculum
+    @curriculum ||= Curriculum.find(params[:id])
   end
 end
