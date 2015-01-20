@@ -4,6 +4,6 @@ class CurriculumsController < ApplicationController
   end
 
   def show
-    render json: Curriculum.find(params[:id]), include: 'instructor'
+    render json: Curriculum.find(params[:id])
   end
 end
