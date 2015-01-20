@@ -6,11 +6,11 @@ instructor = Instructor.where(
 curriculums = [
   {
     title: 'Ember Reading Group',
-    description: 'A collection of things to read about Ember'
+    description: 'A collection of things to read about *Ember*'
   },
   {
     title: 'Linguistics',
-    description: 'An introduction to Linguistics.'
+    description: 'An introduction to *Linguistics*.'
   }
 ]
 
