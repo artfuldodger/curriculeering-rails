@@ -5,8 +5,8 @@ RSpec.describe Curriculum, type: :model do
 
   describe '.alphabetized' do
     it 'returns curriculums in order of title' do
-      two = FactoryGirl.create :curriculum, title: 'Zoo'
-      one = FactoryGirl.create :curriculum, title: 'Bananas'
+      two = create :curriculum, title: 'Zoo'
+      one = create :curriculum, title: 'Bananas'
 
       expect(described_class.alphabetized).to eq [one, two]
     end
