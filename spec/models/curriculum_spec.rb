@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Curriculum, type: :model do
   it { should belong_to :instructor }
+  it { should have_many :lessons }
 
   describe '.alphabetized' do
     it 'returns curriculums in order of title' do
