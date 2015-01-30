@@ -1,11 +1,5 @@
 class LessonsController < ApplicationController
-  def index
-    render json: curriculum.lessons.ordered
-  end
-
-  private
-
-  def curriculum
-    Curriculum.find(params[:curriculum_id])
+  def show
+    render json: Lesson.find(params[:id])
   end
 end

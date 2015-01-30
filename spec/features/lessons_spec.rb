@@ -8,12 +8,10 @@ feature 'Lessons API' do
       description: "Introductory stuff", notes: "We'll be doing some stuff..."
   end
 
-  scenario 'Listing lessons' do
-    response = hit_api "curriculums/#{curriculum.id}/lessons"
+  scenario 'Getting lesson details' do
+    response = hit_api "lessons/#{lesson.id}"
 
-    expect(response['lessons'].size).to eq 1
-
-    lesson_json = response['lessons'].first
+    lesson_json = response['lesson']
 
     expect(lesson_json['id']).to eq lesson.id
     expect(lesson_json['title']).to eq lesson.title
