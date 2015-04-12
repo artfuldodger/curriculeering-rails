@@ -8,7 +8,15 @@ class LessonsController < ApplicationController
     render json: lesson
   end
 
+  def create
+    render json: curriculum.lessons.create(lesson_params)
+  end
+
   private
+
+  def curriculum
+    Curriculum.find(params[:lesson][:curriculum_id])
+  end
 
   def lesson
     Lesson.find(params[:id])
